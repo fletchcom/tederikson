@@ -1,0 +1,11 @@
+mat-toolbar{
+    width: 100%;
+    display: fixed-top;
+}
+
+mat-toolbar.crud{
+    width: 80%;
+    margin-right: 50px;
+    margin-right: 100px;
+}
+

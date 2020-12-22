@@ -1,0 +1,77 @@
+<!-- Title group  -->
+<div class="title-group">
+    <h1 class="mat-h1">Edit Post</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+  
+  <!-- Post form -->
+  <div class="inner-wrapper">
+    <form [formGroup]="editPostForm" (ngSubmit)="updatePost()" novalidate>
+      <mat-card>
+        <div class="controllers-wrapper">
+            
+          <!-- Post name -->
+        <mat-card-header>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Title" formControlName="title">
+            <mat-error *ngIf="handleError('title', 'required')">
+              You must provide a<strong>title!</strong>
+            </mat-error>
+          </mat-form-field>
+        </mat-card-header>
+<br>
+          <!-- Question author -->
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Question Author" formControlName="question_author">
+            <mat-error *ngIf="handleError('question_author', 'required')">
+              You must provide an <strong>question author!</strong>
+            </mat-error>
+          </mat-form-field>
+<br>
+          <!-- Question -->
+          <textarea ng-model="user.biography" rows="5" md-select-on-focus></textarea>
+            <input matInput placeholder="Question" formControlName="question">
+            <mat-error *ngIf="handleError('question', 'required')">
+              You must provide a <strong>question!</strong>
+            </mat-error>
+<br> 
+          <!-- Answer -->
+      <textarea ng-model="user.biography" rows="15" md-select-on-focus></textarea>
+      <input matInput placeholder="Answer" formControlName="answer">
+      <mat-error *ngIf="handleError('answer', 'required')">
+        You must provide an <strong>answer!</strong>
+      </mat-error>
+<br> 
+
+          <!-- Signature -->
+  <textarea class="signature" ng-model="user.biography" rows="3" md-select-on-focus></textarea>
+        <input matInput placeholder="Signature" formControlName="signature">
+        <mat-error *ngIf="handleError('signature', 'required')">
+          You must provide a <strong>signature!</strong>
+        </mat-error>
+
+      <!-- Publication date -->
+      <mat-form-field>
+        <input matInput readonly [matDatepicker]="picker" placeholder="publication_date"
+          formControlName="publication_date" (dateChange)="formatDate($event)">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="handleError('publication_date', 'required')">
+          Publication date is required
+        </mat-error>
+      </mat-form-field>
+      
+        </div>
+      </mat-card>
+  
+      <!-- Submit & Reset -->
+      <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Update</button>
+            <button mat-flat-button color="war" type="button" (click)="goBack()">Go Back</button>
+          </div>
+        </div>
+      </mat-card>
+    </form>
+  </div>

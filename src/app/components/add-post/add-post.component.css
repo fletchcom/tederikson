@@ -1,0 +1,20 @@
+div.title-group{
+    margin: 10px;
+}
+
+div.inner-wrapper{
+    margin: 20px;
+    text-align: center;
+}
+
+mat-form-field {
+    width: 75%;
+  }
+
+textarea{
+    width:95%;
+}
+
+textarea.signature{
+    width:95%;
+}
