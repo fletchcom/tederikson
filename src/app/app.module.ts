@@ -27,6 +27,7 @@ import { PostsListComponent } from './components/posts-list/posts-list.component
 import { PostService } from './shared/post.service';
 import { TestComponent } from './components/test/test.component';
 import { PostsManagementComponent } from './components/posts-management/posts-management.component';
+import { PostViewComponent } from './components/post-view/post-view.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { PostsManagementComponent } from './components/posts-management/posts-ma
     EditPostComponent,
     PostsListComponent,
     TestComponent,
-    PostsManagementComponent
+    PostsManagementComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,
